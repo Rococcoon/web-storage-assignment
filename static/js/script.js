@@ -65,7 +65,7 @@ function clearName() {
  */
 function getName() {
   userName = localStorage.getItem(USER_NAME_KEY);
-  if (userName === "") {
+  if (userName === null) {
     userName = "USER";
   }
   console.log(userName);
