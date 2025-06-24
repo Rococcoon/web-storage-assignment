@@ -53,7 +53,7 @@ function addEventListeners() {
  */
 function clearName() {
   if (userNameInput) {
-    localStorage.setItem(USER_NAME_KEY, "");
+    localStorage.removeItem(USER_NAME_KEY);
     update();
     userNameInput.value = "";
     console.log(USER_NAME_KEY, "user name key cleared");

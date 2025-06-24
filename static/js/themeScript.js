@@ -47,7 +47,7 @@ function addThemeEventListeners() {
  * Clears and resets the theme to the default
  */
 function clearTheme() {
-  localStorage.setItem(USER_THEME_KEY, "default");
+  localStorage.removeItem(USER_THEME_KEY);
   userTheme = "default";
   setTheme();
 }
