@@ -1,4 +1,4 @@
-@import "/static/css/themes.css";
+@import "/web-storage-assignment/static/css/themes.css";
 
 @layer reset, variables, base, components, utilities;
 
