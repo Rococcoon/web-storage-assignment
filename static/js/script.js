@@ -56,7 +56,6 @@ function clearName() {
     localStorage.removeItem(USER_NAME_KEY);
     update();
     userNameInput.value = "";
-    console.log(USER_NAME_KEY, "user name key cleared");
   }
 }
 
@@ -68,7 +67,6 @@ function getName() {
   if (userName === null) {
     userName = "USER";
   }
-  console.log(userName);
 }
 
 /**
@@ -87,7 +85,6 @@ function saveName() {
     localStorage.setItem(USER_NAME_KEY, userNameInput.value);
     update();
     userNameInput.value = "";
-    console.log(USER_NAME_KEY, userNameInput.value);
   } else {
     console.warn("User name input not found or is empty.");
   }
@@ -136,7 +133,6 @@ function update() {
  * Main function to run after initialization
  */
 function main() {
-  console.log("DOM fully loaded and parsed. Initializing application.");
   addEventListeners();
   update();
 }

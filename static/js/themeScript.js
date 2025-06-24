@@ -38,7 +38,6 @@ function addThemeEventListeners() {
   clearThemeBtn?.addEventListener("click", clearTheme);
 
   themeRadios.forEach((radio) => {
-    console.log("adding theme radios");
     radio.addEventListener("click", handleThemeClick);
   });
 }
@@ -108,7 +107,6 @@ function updateTheme() {
  * Main function to run after initialization
  */
 function mainTheme() {
-  console.log("DOM fully loaded and parsed. Initializing application.");
   addThemeEventListeners();
   updateTheme();
 }
