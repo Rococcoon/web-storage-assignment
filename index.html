@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en" data-theme="default">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Storage Assignment</title>
+    <link rel="stylesheet" href="/static/css/styles.css" />
+  </head>
+  <body>
+    <main>
+      <h1 id="greeting-header" data-src="name-storage">Welcome, User!</h1>
+      <div class="name-section">
+        <label for="username">Enter Your Name:</label>
+        <input type="text" id="username" placeholder="John Doe" />
+        <div>
+          <button class="btn-primary" id="save-btn">Save Name</button>
+          <button class="btn-warn" id="clear-btn">Reset Name</button>
+        </div>
+        <p id="display-name" data-src="name-storage">So, your name is USER?</p>
+      </div>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <div class="dynamic-flex">
+        <div class="palette-section">
+          <h2>Current Theme Palette</h2>
+          <div class="color-container">
+            <div class="color-sample base">--base</div>
+            <div class="color-sample text">--text</div>
+            <div class="color-sample main">--main</div>
+            <div class="color-sample sub">--sub</div>
+            <div class="color-sample err">--err</div>
+            <div class="color-sample warn">--warn</div>
+            <div class="color-sample accent">--accent</div>
+            <div class="color-sample success">--success</div>
+          </div>
+        </div>
+        <div class="theme-section">
+          <label>Pick Your Theme:</label>
+          <div class="theme-options">
+            <input
+              type="radio"
+              id="theme-default"
+              name="theme"
+              value="default"
+            />
+            <label for="theme-default">Default</label><br />
+
+            <input
+              type="radio"
+              id="theme-ayu-dark"
+              name="theme"
+              value="ayu-dark"
+            />
+            <label for="theme-ayu-dark">Ayu Dark</label><br />
+
+            <input
+              type="radio"
+              id="theme-catppuccin-frappe"
+              name="theme"
+              value="catppuccin-frappe"
+            />
+            <label for="theme-catppuccin-frappe">Catppuccin Frappe</label><br />
+
+            <input
+              type="radio"
+              id="theme-catppuccin-macchiato"
+              name="theme"
+              value="catppuccin-macchiato"
+            />
+            <label for="theme-catppuccin-macchiato">Catppuccin Macchiato</label
+            ><br />
+
+            <input
+              type="radio"
+              id="theme-dracula"
+              name="theme"
+              value="dracula"
+              checked
+            />
+            <label for="theme-dracula">Dracula</label><br />
+
+            <input
+              type="radio"
+              id="theme-gruvbox-dark"
+              name="theme"
+              value="gruvbox-dark"
+            />
+            <label for="theme-gruvbox-dark">Gruvbox Dark</label><br />
+
+            <input
+              type="radio"
+              id="theme-gruvbox-light"
+              name="theme"
+              value="gruvbox-light"
+            />
+            <label for="theme-gruvbox-light">Gruvbox Light</label><br />
+
+            <input
+              type="radio"
+              id="theme-monokai"
+              name="theme"
+              value="monokai"
+            />
+            <label for="theme-monokai">Mononokai</label><br />
+
+            <input type="radio" id="theme-nord" name="theme" value="nord" />
+            <label for="theme-nord">Nord</label><br />
+
+            <input
+              type="radio"
+              id="theme-ocean-depths"
+              name="theme"
+              value="ocean-depths"
+            />
+            <label for="theme-ocean-depths">Ocean Depths</label><br />
+
+            <input
+              type="radio"
+              id="theme-rose-pine"
+              name="theme"
+              value="rose-pine"
+            />
+            <label for="theme-rose-pine">Rose Pine</label><br />
+
+            <input
+              type="radio"
+              id="theme-rose-pine-dawn"
+              name="theme"
+              value="rose-pine-dawn"
+            />
+            <label for="theme-rose-pine-dawn">Rose Pine Dawn</label><br />
+
+            <input
+              type="radio"
+              id="theme-rose-pine-moon"
+              name="theme"
+              value="rose-pine-moon"
+            />
+            <label for="theme-rose-pine-moon">Rose Pine Moon</label><br />
+
+            <input
+              type="radio"
+              id="theme-solarized-dark"
+              name="theme"
+              value="solarized-dark"
+            />
+            <label for="theme-solarized-dark">Solarized Dark</label><br />
+
+            <input
+              type="radio"
+              id="theme-sunset-glow"
+              name="theme"
+              value="sunset-glow"
+            />
+            <label for="theme-sunset-glow">Sunset Glow</label><br />
+
+            <input
+              type="radio"
+              id="theme-tokyo-night"
+              name="theme"
+              value="tokyo-night"
+            />
+            <label for="theme-tokyo-night">Tokyo Night</label><br />
+
+            <input
+              type="radio"
+              id="theme-tomorrow-night-blue"
+              name="theme"
+              value="tomorrow-night-blue"
+            />
+            <label for="theme-tomorrow-night-blue">Tomorrow Night Blue</label
+            ><br />
+
+            <input
+              type="radio"
+              id="theme-verdant-forest"
+              name="theme"
+              value="verdant-forest"
+            />
+            <label for="theme-verdant-forest">Verdant Forest</label><br />
+
+            <input
+              type="radio"
+              id="theme-zenburn"
+              name="theme"
+              value="zenburn"
+            />
+            <label for="theme-zenburn">Zenburn</label><br />
+          </div>
+          <div class="flex-row">
+            <button class="btn-primary" id="save-theme-btn">Save Theme</button>
+            <button class="btn-warn" id="clear-theme-btn">Reset Theme</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="/static/js/script.js" type="module"></script>
+    <script src="/static/js/themeScript.js" type="module"></script>
+  </body>
+</html>

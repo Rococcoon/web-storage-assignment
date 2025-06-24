@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en" data-theme="rose-pine">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Storage Assignment</title>
+    <link rel="stylesheet" href="/static/css/styles.css" />
+  </head>
+  <body>
+    <main>
+      <h1 id="greeting-header">Welcome, User!</h1>
+      <name-storage></name-storage>
+      <theme-picker></theme-picker>
+    </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const greetingHeader = document.getElementById("greeting-header");
+
+        function getGreeting(name = "User") {
+          const now = new Date();
+          const hour = now.getHours();
+          let greeting = "Welcome";
+
+          if (hour < 12) {
+            greeting = "Good Morning";
+          } else if (hour < 18) {
+            greeting = "Good Afternoon";
+          } else {
+            greeting = "Good Evening";
+          }
+          return `${greeting}, ${name}!`;
+        }
+
+        function updateGreetingHeader(name) {
+          if (greetingHeader) {
+            greetingHeader.textContent = getGreeting(name);
+          }
+        }
+
+        const initialSavedName = localStorage.getItem("userName");
+        updateGreetingHeader(initialSavedName);
+        document.body.addEventListener("name-saved", (event) => {
+          const savedName = event.detail.name;
+          updateGreetingHeader(savedName);
+        });
+
+        document.body.addEventListener("name-cleared", () => {
+          updateGreetingHeader("User");
+        });
+      });
+    </script>
+    <script src="/static/js/nameStorage.js" type="module"></script>
+    <script src="/static/js/themePicker.js" type="module"></script>
+  </body>
+</html>
